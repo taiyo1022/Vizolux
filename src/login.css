@@ -1,0 +1,129 @@
+body {
+  background-color: #c9d6ff;
+  background: linear-gradient(to right,#e2e2e2,#c9d6ff);
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 70px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  color: red;
+}
+
+.logo {
+  display: flex;
+}
+
+.box {
+  border:white 1px solid; /*境界線の指定*/
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+  display:  table-cell;       /* テーブルセルにする */
+  vertical-align:  middle;    /* 中央寄せ */
+  height: auto;              /* 高さ指定 */
+  width: auto;               /* 幅指定 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    
+}
+
+
+.pass {
+  text-align: center;
+  color: blue;
+  text-decoration: none;
+}
+
+.func_button {
+  width: 100%;
+  justify-self: center;
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  padding:  10px;
+  font-size: 16px;
+  border-radius: 10px
+}
+
+
+.or {
+  display: flex;
+  align-items: center; /* 垂直中心 */
+  justify-content: center; /* 水平中心 */
+}
+
+/* 左右に横線 */
+.heading {
+    align-items: center; /* 横線を上下中央 */
+    display: flex; /* 文字と横線を横並び */
+    justify-content: center; /* 文字を中央寄せ */
+    white-space: nowrap;
+  }
+  .heading::before,
+  .heading::after {
+    background-color: black; /* 横線の色 */
+    content: "";
+    height: 1px; /* 横線の高さ */
+    width: 50%; /* 横線の長さ */
+  }
+  .heading::before {
+    margin-right: 20px; /* 文字との余白 */
+  }
+  .heading::after {
+    margin-left: 20px; /* 文字との余白 */
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  row-gap: 30px;
+  width: 84%;
+  max-width: 640px;
+  margin: 60px auto;
+}
+
+.container h1 {
+  justify-self: center;
+}
+
+.container p {
+  justify-self: center;
+}
+
+form {
+  display: grid; 
+  row-gap: 30px;
+}
+
+input {
+  box-sizing: border-box;
+  border: solid 1px white;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #EEEEEE;
+  outline: solid 0.5px #999999;
+  border-radius: 5px;
+  width: 100%;  
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.signup {
+  background-color: green;
+  width: 70%;
+  justify-self: center;
+  border: none;
+  color: white;
+  padding:  10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
