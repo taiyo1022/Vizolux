@@ -1,10 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useState } from 'react';
 import './login.css';
 import {Link} from 'react-router-dom';
-import Modal from './Modal';
+import Modal from './components/Modal';
 
 const Login = () => {
-  const [openModal, setOpenModal] = useState(false)
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalOpen(false);
+  };
+
 
   return (
     <div className="box">
@@ -21,10 +28,21 @@ const Login = () => {
           <button className="func_button">ログイン</button>
           <Link className="pass">パスワードをお忘れですか？</Link>
           <div className="heading">または</div>
-          <button onClick={() => setOpenModal(true)} className="signup">新しいアカウントを作成</button> 
-          <Modal open={openModal} />
-        </form>
-      </div>
+        </form> 
+        <button className="signup" onClick={() => setModalOpen(true)}>新しいアカウントを作成</button> 
+        {modalOpen && (
+          <Modal onSubmit={handleButtonClick} onClose={handleButtonClick}>
+            <h1 className='toroku'>アカウント登録</h1>
+            <form>
+              <input type="text" placeholder="姓"/>
+              <input type="text" placeholder="名"/>
+              <input type="email" placeholder="メールアドレス"/>
+              <input type="password" placeholder="パスワード"/>
+            </form>
+
+          </Modal>
+        )}
+    </div>
   );
 };
 
