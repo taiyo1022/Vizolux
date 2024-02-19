@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Vizolux/static/css/main.323b88e6.css",
+    "main.js": "/Vizolux/static/js/main.aef287cc.js",
+    "index.html": "/Vizolux/index.html",
+    "main.323b88e6.css.map": "/Vizolux/static/css/main.323b88e6.css.map",
+    "main.aef287cc.js.map": "/Vizolux/static/js/main.aef287cc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.323b88e6.css",
+    "static/js/main.aef287cc.js"
+  ]
+}
